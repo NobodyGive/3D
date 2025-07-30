@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujal Thapa - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h2>Loading Portfolio...</h2>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">St.</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi There! 👋</h1>
+            <h2>I'M <span class="gradient-text">SUJAL THAPA</span></h2>
+            <p>Creative Developer | Computer Science Student | Tech Enthusiast</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('about')">Explore My Work</button>
+                <button class="btn-secondary" onclick="openResume()">View Resume</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me 👨‍💻</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3>🎓 Academic Journey</h3>
+                        <p>I am a driven undergraduate student at the <strong>University of Louisiana at Monroe (ULM)</strong>, pursuing a Bachelor of Science in Computer Science with a strong foundation in Mathematics.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>💻 Technical Passion</h3>
+                        <p>I'm passionate about <strong>web development</strong>, <strong>IoT systems</strong>, and <strong>virtual mapping technologies</strong>. I've worked on projects like a Dining Hall Waste Management System using IoT.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>🚀 Future Vision</h3>
+                        <p>I actively explore new areas such as <strong>AI</strong>, <strong>edge computing</strong>, and <strong>backend development</strong>. My goal is to contribute innovative solutions that positively impact society.</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/300x300/10b981/ffffff?text=Sujal+Thapa" alt="Sujal Thapa" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with 3D PI -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects 🚀</h2>
+            
+            <!-- 3D PI Model Container -->
+            <div class="pi-container">
+                <div class="pi-instruction" id="pi-instruction">
+                    <h3>🔄 Rotate the Raspberry PI 3 times to unlock my projects!</h3>
+                    <p class="rotation-counter">Rotations: <span id="rotation-count">0</span>/3</p>
+                </div>
+                
+                <!-- 3D Model Viewer -->
+                <div class="model-viewer" id="model-viewer">
+                    <div id="loading-message">Loading PI model...</div>
+                    <div class="rotation-counter-overlay" id="rotation-counter">
+                        <span id="rotation-display">0/3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Projects (will be revealed after 3 rotations) -->
+            <div class="projects-grid hidden" id="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/10b981/ffffff?text=IoT+Project" alt="IoT Waste Management" />
+                    </div>
+                    <div class="project-content">
+                        <h3>🍽️ IoT Waste Management System</h3>
+                        <p>IoT-powered system using Raspberry Pi and web dashboard to visualize daily food waste and promote sustainability.</p>
+                        <div class="project-tags">
+                            <span class="tag">IoT</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Sujal-thapaa/IoT-Waste-Management" class="btn-github" target="_blank">GitHub</a>
+                            <a href="#" class="btn-demo">Demo Soon</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/3b82f6/ffffff?text=Virtual+Tour" alt="ULM Virtual Tour" />
+                    </div>
+                    <div class="project-content">
+                        <h3>🗺️ ULM Virtual Tour</h3>
+                        <p>A Google Maps-integrated web app showing campus buildings with interactive features and detailed information.</p>
+                        <div class="project-tags">
+                            <span class="tag">Google Maps API</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Sujal-thapaa/ULM_virtual_tour_v2" class="btn-github" target="_blank">GitHub</a>
+                            <a href="https://sujal-thapaa.github.io/ULM_virtual_tour_v2/" class="btn-demo" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/8b5cf6/ffffff?text=AI+Chatbot" alt="HawkBot" />
+                    </div>
+                    <div class="project-content">
+                        <h3>🧠 HawkBot – AI Chat Assistant</h3>
+                        <p>A custom-trained AI chatbot for ULM that provides instant access to campus information using ChatGPT API.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">ChatGPT API</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Sujal-thapaa/HawkBot" class="btn-github" target="_blank">GitHub</a>
+                            <a href="https://sujal-thapaa.github.io/HawkBot/" class="btn-demo" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/ef4444/ffffff?text=SafeRoute" alt="SafeRoute App" />
+                    </div>
+                    <div class="project-content">
+                        <h3>🛡️ SafeRoute App</h3>
+                        <p>A mobile app predicting safer routes based on crime data analysis and real-time safety information.</p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">APIs</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Prasanna401623/SafeRoute" class="btn-github" target="_blank">GitHub</a>
+                            <a href="#" class="btn-demo">Demo Soon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div class="unlock-message hidden" id="unlock-message">
+                <h3>🎉 Projects Unlocked!</h3>
+                <p>Great job! You've successfully unlocked my project portfolio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>📍 Address</h4>
+                        <p>3607 Evangeline Street<br>Madison Hall, University of Louisiana at Monroe<br>Monroe, LA, USA</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>📧 Email</h4>
+                        <p>sujal124suj@gmail.com<br>thapas8@warhawks.ulm.edu</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>📱 Phone</h4>
+                        <p>+1 318-516-7951</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Sujal Thapa. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Sujal-thapaa" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/iamsujalthapa/" target="_blank">LinkedIn</a>
+                    <a href="mailto:sujal124suj@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Three.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
